@@ -1,7 +1,5 @@
 # Variables
 
-Rust is a statically-typed language.
-
 You can declare a variable using **``let``** keyword.
 
 Example:
