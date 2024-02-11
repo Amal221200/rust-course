@@ -1,4 +1,4 @@
-fn logical() {
+pub fn logical() {
     // Logical AND (&&)
     let a = true;
     let b = false;

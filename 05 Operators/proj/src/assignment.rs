@@ -1,4 +1,4 @@
-fn assignment() {
+pub fn assignment() {
     // Assignment (=)
     let mut x = 5;
     println!("x = {}", x); // Output: x = 5

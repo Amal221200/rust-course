@@ -1,4 +1,4 @@
-fn bitwise() {
+pub fn bitwise() {
     // Bitwise AND (&)
     let and_result = 0b1010 & 0b1100;
     println!("Bitwise AND Result: {:b}", and_result); // Output: 1000
