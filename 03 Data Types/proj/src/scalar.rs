@@ -12,19 +12,6 @@ pub fn scalar() {
     let _f: f64 = 2.23; // f64 by default
     let _f2: f64 = 23.23;
 
-    // NUMERIC OPERATIONS
-    let _sum: f64 = _f + _f2;
-    let _diff: f64 = _f - _f2;
-    let _mul: f64 = _f * _f2;
-    let _div: f64 = _f / _f2;
-    let _modulus: f64 = _f % _f2;
-
-    // println!("Sum: {}", _sum);
-    // println!("Sub: {}", _diff);
-    // println!("Mul: {}", _mul);
-    // println!("Div: {}", _div);
-    // println!("Mod: {}", _modulus);
-
     // BOOLEAN TYPE
     let _b = true;
     let _b2 = false;
