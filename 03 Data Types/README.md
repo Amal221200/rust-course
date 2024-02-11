@@ -26,7 +26,17 @@ Rust have 3 kinds of data types:-
         // ARRAYS
         let arr = [12, 213];
     ```
-    ***Note:- We cannot mutate or change the content of arrays like in other language, for that we need to use a similar type called Vectors***
+
+    ***Note:- We cannot mutate or change the content of arrays like in other language, for that we need to use a similar type called Vectors.***
+
+    ***Note:- To print a compound type in Rust, you need to use this `{:?}` as a placeholder in the format string.***
+
+    Example: 
+
+    ```
+        let arr = [12, 213];
+        println!("{:?}", arr);
+    ```
 
     ### Destructuring
 
