@@ -14,7 +14,7 @@ Syntax:
 
 Our main instructions (code) is always written inside the **_main_** function. Any code outside the **_main_** is not executed unless it is used inside the **_main_** function.
 
-**_Note:- You can call the function before it's definition _**
+**_Note:- You can call the function before it's definition.**
 
 ## Parameters and Arguments
 
