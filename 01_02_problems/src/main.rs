@@ -1,4 +1,4 @@
-use std::collections::HashMap;
+use std::{collections::HashMap, usize};
 
 fn main() {
     // _print_len_and_each_character(String::from("Hello World"));
@@ -6,7 +6,8 @@ fn main() {
     // println!("{}", _vowel_counter("Ishaan".to_string()));
     // println!("{:?}", _concatenate_and_compare("Ishaan".to_string(), "Ishaan".to_string()));
     // println!("{:?}", _char_frequency("Ishaan".to_string()));
-    println!("{}", _title_case("hi manny!".to_string()));
+    // println!("{}", _title_case("hi manny!".to_string()));
+    println!("{:?}", all_non_consecutive(&[1, 2, 3, 4, 6, 7, 8, 15, 16]));
 }
 
 // Integer and float
@@ -122,4 +123,30 @@ fn _title_case(string: String) -> String {
         })
         .collect::<Vec<String>>()
         .join(" ")
+}
+
+fn all_non_consecutive(arr: &[i32]) -> Vec<(usize, i32)> {
+    // let mut result: Vec<(usize, i32)> = vec![];
+    // if arr.len() == 0 {
+    //     return result;
+    // }
+    // for i in 0..(arr.len() - 1) {
+    //     let (current, next) = (arr[i], arr[i + 1]);
+    //     if next - current != 1 {
+    //         result.push((i + 1, next));
+    //     }
+    // }
+    // for (i, pair) in arr.windows(2).enumerate() {
+    //     if pair[1] - pair[0] != 1 {
+    //         result.push((i + 1, pair[1]));
+    //     }
+    // }
+    // result
+    arr.windows(2).enumerate().filter_map(|(i, pair)| {
+      if pair[1] - pair[0] != 1 {
+        Some((i + 1, pair[1]))
+      } else {
+        None
+      }
+    }).collect()
 }
