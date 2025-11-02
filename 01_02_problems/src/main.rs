@@ -1,4 +1,4 @@
-use std::{collections::HashMap, usize};
+use std::{collections::HashMap};
 
 fn main() {
     // _print_len_and_each_character(String::from("Hello World"));
@@ -7,7 +7,9 @@ fn main() {
     // println!("{:?}", _concatenate_and_compare("Ishaan".to_string(), "Ishaan".to_string()));
     // println!("{:?}", _char_frequency("Ishaan".to_string()));
     // println!("{}", _title_case("hi manny!".to_string()));
-    println!("{:?}", all_non_consecutive(&[1, 2, 3, 4, 6, 7, 8, 15, 16]));
+    // println!("{:?}", all_non_consecutive(&[1, 2, 3, 4, 6, 7, 8, 15, 16]));
+    let pos = 4;
+    println!("Fibonaci at {pos} position is {:?}", fibonacii_number(pos));
 }
 
 // Integer and float
@@ -149,4 +151,36 @@ fn all_non_consecutive(arr: &[i32]) -> Vec<(usize, i32)> {
         None
       }
     }).collect()
+}
+
+fn fibonacii_number(num: u32) -> u32 {
+  // let mut series : Vec<u32> = vec![0, 1];
+  // if num < 2 {
+  //   return series[num as usize];
+  // }
+  
+  // for i in 2..=num {
+  //   let (a, b) = (series[(i - 1) as usize], series[(i - 2) as usize]);
+  //   series.push(a + b);
+  // }
+  
+  // return series[series.len() - 1];
+  let mut first = 0;
+  let mut second = 1;
+  
+  if num == 0 {
+    return first;
+  }
+  
+  if num == 1 {
+    return second;
+  }
+  
+  for _ in 1..num - 2 {
+    let temp = first;
+    first = second;
+    second = temp + first;
+  }
+  
+  return second;
 }
